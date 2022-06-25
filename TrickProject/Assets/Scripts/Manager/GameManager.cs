@@ -72,28 +72,34 @@ public class GameManager : SingletonBlank<GameManager>
     }
 
 
-    public void ResetDead(float delay,Transform trans,Action action,int levelIndex)
+    public void ResetDead(float delay,Transform trans,Action action,int levelIndex=-1,bool isLoad=true)
     {
         //死亡
-        
 
 
+        trans.GetComponent<PlayerController>().isMove = false;
         //隐藏
-        trans.gameObject.SetActive(false);
+        //trans.gameObject.SetActive(false);
         SceneFader sceneFader = GameObject.Instantiate(Resources.Load<GameObject>("UI/Prefab/SceneFaderCanvas")).GetComponent<SceneFader>();
         sceneFader.SetInCallback((_) => {
             //复活
             trans.gameObject.SetActive(true);
-            trans.position =loadPoint[levelIndex].position;
-            sceneFader.CanvasFadeIn();
+            if (isLoad)
+            {
+                GameObject obj = GameObject.Instantiate(Resources.Load<GameObject>("Prefab/DeadPoint"));
+                obj.transform.position = trans.position;
+            }
+            trans.GetComponent<SpriteRenderer>().flipY = false;
+            if(levelIndex!=-1)
+                trans.position = GameManager.Instance.loadPoint[levelIndex].position;
+            trans.GetComponent<PlayerController>().isMove = true;
+            sceneFader.CanvasFadeOut();
         });
 
         Observable.Timer(TimeSpan.FromSeconds(delay))
             .Subscribe(_ =>
             {
-     
-                sceneFader.CanvasFadeOut();
-                Debug.Log(123);
+                sceneFader.CanvasFadeIn();
                 action?.Invoke();
             }).AddTo(trans);
 

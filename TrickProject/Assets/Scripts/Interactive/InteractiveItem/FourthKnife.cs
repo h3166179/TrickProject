@@ -12,7 +12,8 @@ public class FourthKnife : InteractiveItem
         base.EnterDelegate();
         if(!isPush)
         {
-            //TODO:无效死亡复活
+            GameManager.Instance.GetPlayer().GetComponent<PlayerController>().SetDead();
+            GameManager.Instance.ResetDead(2f,GameManager.Instance.GetPlayer(),null,3,false);
         }
     }
 

@@ -9,7 +9,7 @@ public class ThirdDeath : InteractiveItem
     protected override void Start()
     {
         base.Start();
-        catDeath = transform.GetChild(0).gameObject;
+        catDeath = transform.Find("DeadPoint").gameObject;
         GameManager.Instance.RegisterCatDeathList(catDeath);
     }
 
@@ -17,7 +17,8 @@ public class ThirdDeath : InteractiveItem
     {
         catDeath.SetActive(true);
         catDeath.transform.position = GameManager.Instance.GetPlayer().position;
-        //TODO:猫猫重生
+        GameManager.Instance.ResetDead(2, GameManager.Instance.GetPlayer(), null, 2);
+        DialogManager.Instance.DialogPlay(2);
         //catDeath.transform.SetParent(transform.parent);
     }
 }
