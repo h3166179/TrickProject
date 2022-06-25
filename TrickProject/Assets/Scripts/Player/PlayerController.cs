@@ -26,7 +26,9 @@ public class PlayerController : MonoBehaviour
 
     Vector3 lastCenter;
 
-   public bool isJump;
+    public bool isJump;
+
+    public bool isMove=true;
 
     void Start()
     {
@@ -77,6 +79,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!isMove)
+            return;
+
          h = Input.GetAxis("Horizontal");
         float speed;
 

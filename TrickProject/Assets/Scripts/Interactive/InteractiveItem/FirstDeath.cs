@@ -9,7 +9,7 @@ public class FirstDeath : InteractiveItem
     protected override void Start()
     {
         base.Start();
-        catDeath = transform.GetChild(0).gameObject;
+        catDeath = transform.Find("DeadPoint").gameObject;
         GameManager.Instance.RegisterCatDeathList(catDeath);
     }
 
@@ -17,7 +17,7 @@ public class FirstDeath : InteractiveItem
     {
         catDeath.SetActive(true);
         catDeath.transform.position = GameManager.Instance.GetPlayer().position;
-        GameManager.Instance.ResetDead(2,GameManager.Instance.GetPlayer(),null);
+        GameManager.Instance.ResetDead(2,GameManager.Instance.GetPlayer(),null,0);
         //猫猫失去生命
         GameManager.Instance.UpdateCatHealth(false);
         Destroy(GetComponent<Collider2D>());
