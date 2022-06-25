@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
+using UniRx.Triggers;
+using System;
 
 public class GameManager : SingletonBlank<GameManager>
 {
@@ -65,5 +68,26 @@ public class GameManager : SingletonBlank<GameManager>
             return player;
         else
             return null;
+    }
+
+
+    public void ResetDead(float delay,Transform trans)
+    {
+        //死亡
+
+
+
+        //隐藏
+        trans.gameObject.SetActive(false);
+
+
+        //复活
+
+        Observable.Timer(TimeSpan.FromSeconds(delay))
+            .Subscribe(_ =>
+            {
+                trans.gameObject.SetActive(true);
+            }).AddTo(trans);
+
     }
 }
