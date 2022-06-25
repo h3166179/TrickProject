@@ -10,6 +10,7 @@ public class StartHat : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        GameManager.Instance.GetPlayer().GetComponent<PlayerController>().isMove = false;
         StartCoroutine(HideHat());
     }
 
@@ -25,7 +26,7 @@ public class StartHat : MonoBehaviour
         //数值修正
         spriteRenderer.color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(0.5f);
-        //TODO:猫站立起来，开始游戏
+        GameManager.Instance.GetPlayer().GetComponent<PlayerController>().isMove = true;
         Destroy(this.gameObject);
     }
 }

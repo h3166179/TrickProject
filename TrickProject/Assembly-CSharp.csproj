@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\Manager\LevelController.cs" />
     <Compile Include="Assets\Scripts\Manager\LevelEventManager.cs" />
     <Compile Include="Assets\Scripts\OtherEffect\JumpHat.cs" />
+    <Compile Include="Assets\Scripts\OtherEffect\LoadPointRegister.cs" />
     <Compile Include="Assets\Scripts\OtherEffect\StartHat.cs" />
     <Compile Include="Assets\Scripts\Player\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />

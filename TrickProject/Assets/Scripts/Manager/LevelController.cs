@@ -51,7 +51,7 @@ public class LevelController : MonoBehaviour
                 {
                     player.transform.position = plankPos;
 
-                });
+                },4);
 
 
             }).AddTo(blade);
@@ -81,7 +81,7 @@ public class LevelController : MonoBehaviour
                         //waterBox.GetComponent<BoxCollider2D>().enabled = true;
                         //waterBox.gameObject.AddComponent<Rigidbody2D>();
                       
-                    });
+                    },5);
                     GameObject.Destroy(go);
                 }
             }).AddTo(go);
@@ -113,7 +113,7 @@ public class LevelController : MonoBehaviour
 
               
 
-            });
+            },6);
 
 
 
@@ -162,7 +162,7 @@ public class LevelController : MonoBehaviour
                     
 
 
-                     });
+                     },7);
                 }).AddTo(umbrella);
 
             });

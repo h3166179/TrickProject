@@ -14,6 +14,7 @@ public class GameManager : SingletonBlank<GameManager>
     private Text healText;
     private List<GameObject> catDeathList = new List<GameObject>();
     public int LevelIndex = 1;
+    public List<Transform> loadPoint = new List<Transform>();
 
     public void RegisterPlayer(Transform player)
     {
@@ -71,7 +72,7 @@ public class GameManager : SingletonBlank<GameManager>
     }
 
 
-    public void ResetDead(float delay,Transform trans,Action action)
+    public void ResetDead(float delay,Transform trans,Action action,int levelIndex)
     {
         //死亡
         
@@ -83,6 +84,7 @@ public class GameManager : SingletonBlank<GameManager>
         sceneFader.SetInCallback((_) => {
             //复活
             trans.gameObject.SetActive(true);
+            trans.position = GameManager.Instance.loadPoint[levelIndex].position;
             sceneFader.CanvasFadeOut();
         });
 
