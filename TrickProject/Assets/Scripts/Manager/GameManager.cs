@@ -75,7 +75,8 @@ public class GameManager : SingletonBlank<GameManager>
     public void ResetDead(float delay,Transform trans,Action action,int levelIndex=-1,bool isLoad=true)
     {
         //死亡
-
+        if (GameManager.Instance.GetPlayer().GetComponent<PlayerController>().isDead)
+            return;
 
         trans.GetComponent<PlayerController>().isMove = false;
         //隐藏

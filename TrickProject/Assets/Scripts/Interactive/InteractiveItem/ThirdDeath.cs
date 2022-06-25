@@ -16,8 +16,9 @@ public class ThirdDeath : InteractiveItem
     protected override void EnterDelegate()
     {
         catDeath.SetActive(true);
+        GameManager.Instance.GetPlayer().gameObject.SetActive(false);
         catDeath.transform.position = GameManager.Instance.GetPlayer().position;
-        GameManager.Instance.ResetDead(2, GameManager.Instance.GetPlayer(), null, 2);
+        GameManager.Instance.ResetDead(2, GameManager.Instance.GetPlayer(), null, 2,false);
         DialogManager.Instance.DialogPlay(2);
         //catDeath.transform.SetParent(transform.parent);
     }
