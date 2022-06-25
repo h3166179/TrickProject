@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 
     public Sprite[] walkImgList;
     public Sprite[] jumpImgList;
+    public Sprite Idle;
 
     SpriteRenderer renderer;
    public int walkIndex;
@@ -91,7 +92,12 @@ public class PlayerController : MonoBehaviour
             AudioManager.Instance.UsualSoundsPlay("跳跃");
         }
 
-        
+        if (h==0&&!isJump)
+        {
+            renderer.sprite = Idle;
+            walkIndex = 0;
+            jumpIndex = 0;
+        }
       
         if(Input.GetKeyDown(KeyCode.Escape))
         {
