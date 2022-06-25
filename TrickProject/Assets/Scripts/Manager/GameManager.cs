@@ -15,6 +15,9 @@ public class GameManager : SingletonBlank<GameManager>
     private List<GameObject> catDeathList = new List<GameObject>();
     public int LevelIndex = 1;
     public List<Transform> loadPoint = new List<Transform>();
+    private int healthNum = 9;
+    private Canvas HealthUI;
+    private Camera camera;
 
     public void RegisterPlayer(Transform player)
     {
@@ -31,6 +34,21 @@ public class GameManager : SingletonBlank<GameManager>
     {
         if (!catDeathList.Contains(cat))
             catDeathList.Add(cat);
+    }
+
+    public void RegisterHealthUI(Canvas canvas)
+    {
+        HealthUI = canvas;
+    }
+
+    public void RegisterCamera(Camera camera)
+    {
+        this.camera = camera;
+    }
+
+    public Camera GetCamera()
+    {
+        return camera;
     }
 
     //更新猫生命值
@@ -105,5 +123,14 @@ public class GameManager : SingletonBlank<GameManager>
             }).AddTo(trans);
 
 
+    }
+    
+    public void HealthUIUpdate()
+    {
+        int new_num = healthNum - 1;
+        healthNum--;
+        Sprite sprite = Resources.Load<Sprite>("Texture/Health/health"+new_num.ToString());
+        Image image = HealthUI.transform.GetChild(0).GetChild(0).GetComponent<Image>();
+        image.sprite = sprite;
     }
 }

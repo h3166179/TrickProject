@@ -19,6 +19,7 @@ public class ThirdDeath : InteractiveItem
         GameManager.Instance.GetPlayer().gameObject.SetActive(false);
         catDeath.transform.position = GameManager.Instance.GetPlayer().position;
         GameManager.Instance.ResetDead(2, GameManager.Instance.GetPlayer(), null, 2,false);
+        GameManager.Instance.HealthUIUpdate();
         DialogManager.Instance.DialogPlay(2);
         //catDeath.transform.SetParent(transform.parent);
     }

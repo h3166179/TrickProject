@@ -15,7 +15,7 @@ public class CameraController : MonoBehaviour
 
     private void Awake()
     {
-        //GameManager.Instance.RegisterCamera(this.gameObject);
+        GameManager.Instance.RegisterCamera(GetComponent<Camera>());
         camera = GetComponent<Camera>();
     }
 
@@ -28,7 +28,7 @@ public class CameraController : MonoBehaviour
             pos_x = leftBound;
         else if (pos_x >= rightBound)
             pos_x = rightBound;
-        transform.position = new Vector3(pos_x, player.position.y + offsetY, transform.position.z);
+        transform.position = new Vector3(pos_x, player.position.y + offsetY+2.12f, transform.position.z);
     }
 
 	private void FixedUpdate()
