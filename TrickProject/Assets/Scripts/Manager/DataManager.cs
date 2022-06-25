@@ -48,6 +48,9 @@ public class DataManager:SingletonBlank<DataManager>
         }
 
     }
+
+
+
 }
 
 public class ItemData
