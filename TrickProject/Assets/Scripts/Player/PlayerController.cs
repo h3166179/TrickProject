@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.Log(1);
+        
             renderer.sprite = imgList[index];
             index++;
             if (index == imgList.Length)

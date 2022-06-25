@@ -59,6 +59,17 @@ public class LevelController : MonoBehaviour
 
         });
 
+        BoxCollider2D waterBoxCollider=waterBox.GetComponent<BoxCollider2D>();
+
+        waterBoxCollider.OnTriggerEnter2DAsObservable()
+            .Where(_=>_.tag=="Player")
+            .Subscribe(_ =>
+            {
+                Debug.Log("water");
+                LevelEventManager.Instance.LevelEventDic[6]();
+            }).AddTo(gameObject);
+
+
         LevelEventManager.Instance.RegisterLevelEvnent(6, () =>
         {
             //水箱
@@ -68,22 +79,34 @@ public class LevelController : MonoBehaviour
             Observable.EveryUpdate()
             .Subscribe(_ =>
             {
-              float h=  Mathf.Lerp(waterBox.material.GetFloat("Hight"), 1, 0.02f);
+              float h=  Mathf.Lerp(waterBox.material.GetFloat("Hight"), 1, Time.deltaTime*0.1f);
+      
                 waterBox.material.SetFloat("Hight",h);
+              
+             
 
-
-                if (waterBox.material.GetFloat("Hight") >0.5f)
+                if (waterBox.material.GetFloat("Hight") >0.7f)
                 {
-                    h = 1;
-                    waterBox.material.SetFloat("Hight", h);
-                    GameManager.Instance.ResetDead(5f, player,()=> {
+                   
 
-                        //waterBox.GetComponent<BoxCollider2D>().enabled = true;
-                        //waterBox.gameObject.AddComponent<Rigidbody2D>();
-                      
-                    },5);
-                    GameObject.Destroy(go);
+                    if (waterBoxCollider.isTrigger)
+                    {
+                        h = 1;
+                        waterBoxCollider.isTrigger = false;
+
+                        waterBox.material.SetFloat("Hight", h);
+                        GameManager.Instance.ResetDead(5f, player, () =>
+                        {
+                            GameObject.Destroy(go);
+                            //waterBox.GetComponent<BoxCollider2D>().enabled = true;
+                            //waterBox.gameObject.AddComponent<Rigidbody2D>();
+
+                        }, 5);
+                    }
+                 
+                  
                 }
+               
             }).AddTo(go);
 
           

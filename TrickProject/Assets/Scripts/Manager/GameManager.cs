@@ -84,14 +84,16 @@ public class GameManager : SingletonBlank<GameManager>
         sceneFader.SetInCallback((_) => {
             //复活
             trans.gameObject.SetActive(true);
-            trans.position = GameManager.Instance.loadPoint[levelIndex].position;
-            sceneFader.CanvasFadeOut();
+            trans.position =loadPoint[levelIndex].position;
+            sceneFader.CanvasFadeIn();
         });
 
         Observable.Timer(TimeSpan.FromSeconds(delay))
             .Subscribe(_ =>
             {
-                sceneFader.CanvasFadeIn();
+     
+                sceneFader.CanvasFadeOut();
+                Debug.Log(123);
                 action?.Invoke();
             }).AddTo(trans);
 

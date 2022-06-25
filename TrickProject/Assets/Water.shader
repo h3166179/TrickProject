@@ -1,4 +1,4 @@
-﻿Shader "Master/Sprite/Distortion"
+﻿Shader "Master/Sprite/Water"
 {
 	Properties
 	{
