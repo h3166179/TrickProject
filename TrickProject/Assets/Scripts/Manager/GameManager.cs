@@ -74,20 +74,24 @@ public class GameManager : SingletonBlank<GameManager>
     public void ResetDead(float delay,Transform trans)
     {
         //死亡
-
+        
 
 
         //隐藏
         trans.gameObject.SetActive(false);
-
-
-        //复活
+        SceneFader sceneFader = GameObject.Instantiate(Resources.Load<GameObject>("UI/Prefab/SceneFaderCanvas")).GetComponent<SceneFader>();
+        sceneFader.SetInCallback((sceneFader) => {
+            //复活
+            trans.gameObject.SetActive(true);
+            sceneFader.CanvasFadeOut();
+        });
 
         Observable.Timer(TimeSpan.FromSeconds(delay))
             .Subscribe(_ =>
             {
-                trans.gameObject.SetActive(true);
+                sceneFader.CanvasFadeIn();
             }).AddTo(trans);
+
 
     }
 }
