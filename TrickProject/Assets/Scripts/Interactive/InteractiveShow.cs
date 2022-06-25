@@ -6,6 +6,7 @@ public class InteractiveShow : InteractiveBase
 {
     [SerializeField] private Material outMt;
 
+    private GameObject showTipPb;
     private Material normalMt;
     private SpriteRenderer spriteRenderer;
 
@@ -13,7 +14,8 @@ public class InteractiveShow : InteractiveBase
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalMt = spriteRenderer.material;
-        //TODO:outMt动态加载
+        outMt = Resources.Load<Material>("Shader/ShowMt");
+        showTipPb = gameObject.transform.Find("ShowTips").gameObject;
     }
 
     protected override void EnterDelegate()
@@ -22,13 +24,15 @@ public class InteractiveShow : InteractiveBase
             spriteRenderer.material = outMt;
         else
             Debug.Log("InteractiveShow Dont Have outMt");
+        if(showTipPb!=null)
+            showTipPb.SetActive(true);
     }
 
     protected override void ExitDelegate()
     {
         if(normalMt!=null)
-        {
             spriteRenderer.material = normalMt;
-        }
+        if (showTipPb != null)
+            showTipPb.SetActive(false);
     }
 }
