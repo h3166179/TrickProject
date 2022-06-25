@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a879ac62472665947a39cb5fb564a6cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d4e5ad357079bd34aacceb4015446cc6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,21 +120,11 @@ MonoBehaviour:
   height: 5
   Speed: 2
   walkImgList:
-  - {fileID: 21300000, guid: a879ac62472665947a39cb5fb564a6cc, type: 3}
-  - {fileID: 21300000, guid: a879ac62472665947a39cb5fb564a6cc, type: 3}
-  - {fileID: 21300000, guid: d5a05b2e3f30c6c47b640d535fa0f7bf, type: 3}
-  - {fileID: 21300000, guid: 96f325a8e44714446b897715a6e2629a, type: 3}
-  - {fileID: 21300000, guid: 8cb0dcb66f086f84f89235dffcc1cafb, type: 3}
-  - {fileID: 21300000, guid: 7f4eac04a37abe54cb1df43c4c9a2289, type: 3}
-  - {fileID: 21300000, guid: 82b8f51091676c14989f226b369c55f8, type: 3}
+  - {fileID: 21300000, guid: d4e5ad357079bd34aacceb4015446cc6, type: 3}
+  - {fileID: 21300000, guid: f59ddeac9944b3547b7f9df099666d55, type: 3}
   jumpImgList:
-  - {fileID: 21300000, guid: 6af1f4066e6cfd74c8f09f6a7feeafcb, type: 3}
-  - {fileID: 21300000, guid: 38e1b8d69810ef5429011338d1a98523, type: 3}
-  - {fileID: 21300000, guid: ed3b015519f4326408360bba8447b86d, type: 3}
-  - {fileID: 21300000, guid: 9010d39c811f8c748b4a4d4828e9dcb3, type: 3}
-  - {fileID: 21300000, guid: 16d10ece638e6354abe260c3ac19dfa3, type: 3}
-  - {fileID: 21300000, guid: 5e7f077411395644d92cce45037e5eb4, type: 3}
-  - {fileID: 21300000, guid: d1ee097deb88e1e4b8976d0d9548372c, type: 3}
+  - {fileID: 21300000, guid: d4e5ad357079bd34aacceb4015446cc6, type: 3}
+  - {fileID: 21300000, guid: f59ddeac9944b3547b7f9df099666d55, type: 3}
   walkIndex: 0
   jumpIndex: 0
   isJump: 0
@@ -151,16 +141,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2628348, y: 0.14789605}
+  m_Offset: {x: -0.13678169, y: -0.605772}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.82, y: 6.96}
+    oldSize: {x: 16, y: 16}
     newSize: {x: 6.82, y: 6.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.162913, y: 2.52312}
+  m_Size: {x: 10.246315, y: 9.855495}
   m_EdgeRadius: 0
