@@ -18,6 +18,6 @@ public class ThirdDeath : InteractiveItem
         catDeath.SetActive(true);
         catDeath.transform.position = GameManager.Instance.GetPlayer().position;
         //TODO:猫猫重生
-        catDeath.transform.SetParent(transform.parent);
+        //catDeath.transform.SetParent(transform.parent);
     }
 }
