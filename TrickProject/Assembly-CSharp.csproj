@@ -64,6 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\Interactive\InteractiveBase.cs" />
     <Compile Include="Assets\Scripts\Interactive\InteractiveItem.cs" />
     <Compile Include="Assets\Scripts\Interactive\InteractiveItem\FirstDeath.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\Scripts\Interactive\InteractiveItem\SecondBoard.cs" />
     <Compile Include="Assets\Scripts\Interactive\InteractiveItem\SecondDMN.cs" />
     <Compile Include="Assets\Scripts\Interactive\InteractiveItem\SecondDeath.cs" />
+    <Compile Include="Assets\Scripts\Interactive\InteractiveItem\SecondPkTrigger.cs" />
     <Compile Include="Assets\Scripts\Interactive\InteractiveItem\ThirdDeath.cs" />
     <Compile Include="Assets\Scripts\Interactive\InteractiveShow.cs" />
     <Compile Include="Assets\Scripts\Manager\AudioManager.cs" />
@@ -82,11 +84,13 @@
     <Compile Include="Assets\Scripts\Manager\LevelEventManager.cs" />
     <Compile Include="Assets\Scripts\OtherEffect\JumpHat.cs" />
     <Compile Include="Assets\Scripts\OtherEffect\StartHat.cs" />
+    <Compile Include="Assets\Scripts\Player\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Tools\SceneFader.cs" />
     <Compile Include="Assets\Scripts\Tools\Singleton.cs" />
     <Compile Include="Assets\Scripts\Tools\SingletonBlank.cs" />
     <Compile Include="Assets\Scripts\UI\CatHealthRegister.cs" />
+    <None Include="Assets\StreamingResource\Sumbit.txt" />
     <None Include="Assets\NewImageEffectShader.shader" />
     <None Include="Assets\Resources\Txt\Dialog.txt" />
     <None Include="Assets\Resources\Shader\OutLight3.shader" />

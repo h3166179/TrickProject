@@ -23,8 +23,9 @@ public class StartHat : MonoBehaviour
             yield return null;
         }
         //数值修正
-        spriteRenderer.color = new Color(1, 1, 1, 1);
+        spriteRenderer.color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(0.5f);
         //TODO:猫站立起来，开始游戏
+        Destroy(this.gameObject);
     }
 }
