@@ -15,7 +15,6 @@ public class DialogManager : Singleton<DialogManager>
     {
         dialogAsset = Resources.Load<TextAsset>("Txt/Dialog");
         dialogPrefab = Resources.Load<GameObject>("UI/Prefab/DialogCanvas");
-        DialogPlay(8);
     }
 
     public void DialogPlay(int index)

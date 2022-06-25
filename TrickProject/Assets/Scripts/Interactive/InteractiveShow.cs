@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractiveShow : InteractiveBase
 {
-    [SerializeField] private Material outMt;
+    //[SerializeField] private Material outMt;
     [SerializeField] private float tipSpeed = 0.5f;
 
     private GameObject showTipPb;
@@ -12,21 +12,22 @@ public class InteractiveShow : InteractiveBase
     private Material normalMt;
     private SpriteRenderer spriteRenderer;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
         normalMt = spriteRenderer.material;
-        outMt = Resources.Load<Material>("Shader/ShowMt");
+        //outMt = Resources.Load<Material>("Shader/ShowMt");
         showTipPb = gameObject.transform.Find("ShowTips").gameObject;
         showGroup = showTipPb.GetComponent<CanvasGroup>();
     }
 
     protected override void EnterDelegate()
     {
-        if (outMt != null)
-            spriteRenderer.material = outMt;
-        else
-            Debug.Log("InteractiveShow Dont Have outMt");
+        //if (outMt != null)
+        //    spriteRenderer.material = outMt;
+        //else
+        //    Debug.Log("InteractiveShow Dont Have outMt");
         if (showTipPb != null)
             StartCoroutine(ShowText());
     }
@@ -47,8 +48,8 @@ public class InteractiveShow : InteractiveBase
 
     protected override void ExitDelegate()
     {
-        if(normalMt!=null)
-            spriteRenderer.material = normalMt;
+        //if(normalMt!=null)
+        //    spriteRenderer.material = normalMt;
         if (showTipPb != null)
             StartCoroutine(HideText());
     }

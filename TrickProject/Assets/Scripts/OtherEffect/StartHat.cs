@@ -11,6 +11,7 @@ public class StartHat : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         GameManager.Instance.GetPlayer().GetComponent<PlayerController>().isMove = false;
+        GameManager.Instance.GetPlayer().GetComponent<PlayerController>().isState = true;
         StartCoroutine(HideHat());
     }
 
@@ -27,6 +28,8 @@ public class StartHat : MonoBehaviour
         spriteRenderer.color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(0.5f);
         GameManager.Instance.GetPlayer().GetComponent<PlayerController>().isMove = true;
+        GameManager.Instance.GetPlayer().GetComponent<PlayerController>().isState = false;
+        GameManager.Instance.GetPlayer().GetComponent<PlayerController>().isJump = true;
         Destroy(this.gameObject);
     }
 }
