@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstDeath : InteractiveItem
+public class SecondDeath : InteractiveItem
 {
     private GameObject catDeath;
 
@@ -15,11 +15,10 @@ public class FirstDeath : InteractiveItem
 
     protected override void EnterDelegate()
     {
-        //TODO:猫猫重生
+        //猫猫尸体脱落
         catDeath.SetActive(true);
-        //猫猫失去生命
-        GameManager.Instance.UpdateCatHealth(false);
-        Destroy(GetComponent<Collider2D>());
+        catDeath.transform.position = GameManager.Instance.GetPlayer().position;
+        //TODO:猫猫重生
+        catDeath.transform.SetParent(transform.parent);
     }
-
 }

@@ -71,6 +71,10 @@ public class PlayerController : MonoBehaviour
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, height);
         }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            DataManager.Instance.LoadLevelData(GameManager.Instance.LevelIndex);
+        }
 
       
        

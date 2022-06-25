@@ -10,6 +10,7 @@ public class GameManager : SingletonBlank<GameManager>
     private Canvas CatHealth;
     private Text healText;
     private List<GameObject> catDeathList = new List<GameObject>();
+    public int LevelIndex = 1;
 
     public void RegisterPlayer(Transform player)
     {

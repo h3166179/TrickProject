@@ -5,40 +5,71 @@ using UnityEngine;
 
 public class DataManager:SingletonBlank<DataManager>
 {
-    Dictionary<int, ItemData> DataDic = new Dictionary<int, ItemData>();
+    Dictionary<string, Transform> itemDic = new Dictionary<string, Transform>();
+    Dictionary<string, ItemData> DataDic = new Dictionary<string, ItemData>();
 
-    public void SaveData(ItemData data,Action action)
+    public void SaveData(Transform trs,Action action,Sprite sprite=null)
     {
-        if (!DataDic.ContainsKey(data.id))
+        ItemData itemData = new ItemData(trs.GetComponent<InteractiveItem>().id,
+            trs.position,trs.eulerAngles,trs.localScale, sprite);
+        if (!DataDic.ContainsKey(itemData.id))
         {
-            DataDic.Add(data.id, data);
+            DataDic.Add(itemData.id, itemData);
+            itemDic.Add(itemData.id, trs);
         }
-        else
-        {
-            DataDic[data.id] = data;
-        }
-       
 
         action?.Invoke();
     }
 
-    public void LoadData(Transform trans,int id,Action action)
+    public void LoadData(string id,Action action)
     {
-        if (DataDic.ContainsKey(id))
+        Transform trans = itemDic[id];
+        if (trans!=null && DataDic.ContainsKey(id))
         {
             trans.position = DataDic[id].Pos;
             trans.eulerAngles = DataDic[id].Rot;
             trans.localScale = DataDic[id].Scale;
+            if (trans.GetComponent<SpriteRenderer>() != null &&
+                trans.GetComponent<SpriteRenderer>().sprite != DataDic[id].sprite)
+                trans.GetComponent<SpriteRenderer>().sprite = DataDic[id].sprite;
+            trans.gameObject.SetActive(true);
             action?.Invoke();
         }
+    }
+
+    public void LoadLevelData(int sceneId)
+    {
+        switch (sceneId)
+        {
+            case 1:
+                LoadData("1",null);
+                LoadData("2", null);
+                break;
+        }
+
     }
 }
 
 public class ItemData
 {
-   public  int id;
-   public Vector3 Pos;
-   public Vector3 Rot;
-   public Vector3 Scale;
+    public string id;
+    public Vector3 Pos;
+    public Vector3 Rot;
+    public Vector3 Scale;
+    public Sprite sprite;
+
+    public ItemData()
+    {
+
+    }
+  
+    public ItemData(string id, Vector3 pos, Vector3 rot, Vector3 scale,Sprite sprite)
+    {
+        this.id = id;
+        Pos = pos;
+        Rot = rot;
+        Scale = scale;
+        this.sprite = sprite;
+    }
 }
 
