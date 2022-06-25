@@ -8,7 +8,7 @@ public abstract class InteractiveBase : MonoBehaviour
     private Action EnterAction;
     private Action ExitAction;
 
-    private void Start()
+    protected virtual void Start()
     {
         EnterAction += EnterDelegate;
         ExitAction += ExitDelegate;

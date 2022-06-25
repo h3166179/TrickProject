@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
         collider2D = GetComponent<BoxCollider2D>();
 
-       
+        GameManager.Instance.RegisterPlayer(this.transform);
 
         Observable.Interval(System.TimeSpan.FromSeconds(0.2f))
             .Subscribe(_ => {
