@@ -4331,8 +4331,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23171522, y: -0.18993258}
-  m_Size: {x: 7.889911, y: 10.080788}
+  m_Offset: {x: 0.23171522, y: -0.21}
+  m_Size: {x: 5.68, y: 6}
   m_Direction: 0
 --- !u!1 &2112850931
 GameObject:
@@ -4709,11 +4709,14 @@ MonoBehaviour:
   jumpImgList:
   - {fileID: 21300000, guid: d4e5ad357079bd34aacceb4015446cc6, type: 3}
   - {fileID: 21300000, guid: f59ddeac9944b3547b7f9df099666d55, type: 3}
+  Idle: {fileID: 21300000, guid: d69c1e51593749245aa4f8e8f1bb002e, type: 3}
+  Damage: {fileID: 21300000, guid: 9cb868fd3818c7545ba7fb6077757d14, type: 3}
   walkIndex: 0
   jumpIndex: 0
   isJump: 0
   isMove: 1
   isState: 0
+  isDead: 0
 --- !u!4 &1722605355533784025
 Transform:
   m_ObjectHideFlags: 0

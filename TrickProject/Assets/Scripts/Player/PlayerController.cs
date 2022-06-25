@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public Sprite[] walkImgList;
     public Sprite[] jumpImgList;
     public Sprite Idle;
+    public Sprite Damage;
+ 
 
     SpriteRenderer renderer;
    public int walkIndex;
@@ -31,6 +33,8 @@ public class PlayerController : MonoBehaviour
 
     public bool isMove=true;
     public bool isState = false;
+    public bool isDead = false;
+
 
     void Start()
     {
@@ -48,7 +52,7 @@ public class PlayerController : MonoBehaviour
         Observable.Interval(System.TimeSpan.FromSeconds(0.2f))
             .Subscribe(_ => {
 
-                if (isJump)
+                if (!isJump)
                 {
                     PlayMoveAnim(h < 0, jumpImgList, ref jumpIndex);
                 }else
@@ -65,6 +69,7 @@ public class PlayerController : MonoBehaviour
 
         collider2D.OnCollisionStay2DAsObservable()
                 .Where(_ => _.gameObject.tag == "Map")
+          
                .Subscribe(_ =>
                {
                    if(!isState)
@@ -73,6 +78,7 @@ public class PlayerController : MonoBehaviour
 
         collider2D.OnCollisionExit2DAsObservable()
             .Where(_=>_.gameObject.tag=="Map")
+                  .Where(_ => !isDead)
             .Subscribe(_ =>
             {
                 if (!isState)
@@ -84,29 +90,42 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (isState)
-            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Texture/Player/3");
+        {
+
+            renderer.sprite = Resources.Load<Sprite>("Texture/Player/3");
+            isState = false;
+        }
+
         if (!isMove)
         {
             return;
         }
 
          h = Input.GetAxis("Horizontal");
-        float speed;
 
-        if (Input.GetKeyDown(KeyCode.Space) && isJump)
+
+        if (Input.GetKeyDown(KeyCode.Space) /*&& !isJump*/)
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, height);
             AudioManager.Instance.UsualSoundsPlay("跳跃");
         }
 
-        if (h==0&&!isJump)
+
+
+        if (h == 0 && isJump && !isDead)
         {
             renderer.sprite = Idle;
             walkIndex = 0;
             jumpIndex = 0;
         }
-      
-        if(Input.GetKeyDown(KeyCode.Escape))
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            isDead = true;
+            SetDead();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             DataManager.Instance.LoadLevelData(GameManager.Instance.LevelIndex);
         }
@@ -129,6 +148,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            Debug.Log(1);
             renderer.sprite = imgList[index];
             index++;
             if (index == imgList.Length)
@@ -137,5 +157,21 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+    }
+
+    public void SetDead()
+    {
+  
+        rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, height * 0.5f);
+        renderer.sprite = Damage;
+        renderer.flipY = true;
+        collider2D.offset += new Vector2(0, 0.5f);
+        Observable.Timer(System.TimeSpan.FromSeconds(1f))
+            .Subscribe(_ =>
+            {
+             
+                renderer.sprite = Damage;
+          
+            }).AddTo(gameObject);
     }
 }
