@@ -6,7 +6,7 @@ using UniRx.Triggers;
 
 public class PlayerController : MonoBehaviour
 {
-    Rigidbody2D rigidbody2D;
+   public Rigidbody2D rigidbody2D;
     Animator anim;
 
     public float height;
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public Sprite Damage;
  
 
-    SpriteRenderer renderer;
+    public SpriteRenderer renderer;
    public int walkIndex;
    public int jumpIndex;
 

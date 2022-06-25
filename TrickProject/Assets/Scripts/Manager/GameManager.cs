@@ -76,8 +76,11 @@ public class GameManager : SingletonBlank<GameManager>
     {
         //死亡
 
+        PlayerController playerController = trans.GetComponent<PlayerController>();
+        playerController.isMove = false;
+ 
 
-        trans.GetComponent<PlayerController>().isMove = false;
+        //trans.GetComponent<PlayerController>().isMove = false;
         //隐藏
         //trans.gameObject.SetActive(false);
         SceneFader sceneFader = GameObject.Instantiate(Resources.Load<GameObject>("UI/Prefab/SceneFaderCanvas")).GetComponent<SceneFader>();
@@ -93,13 +96,14 @@ public class GameManager : SingletonBlank<GameManager>
             if(levelIndex!=-1)
                 trans.position = GameManager.Instance.loadPoint[levelIndex].position;
             trans.GetComponent<PlayerController>().isMove = true;
-            sceneFader.CanvasFadeOut();
+            sceneFader.CanvasFadeIn();
         });
 
         Observable.Timer(TimeSpan.FromSeconds(delay))
             .Subscribe(_ =>
             {
-                sceneFader.CanvasFadeIn();
+               
+                sceneFader.CanvasFadeOut();
                 action?.Invoke();
             }).AddTo(trans);
 

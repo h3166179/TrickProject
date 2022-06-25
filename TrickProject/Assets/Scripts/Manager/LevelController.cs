@@ -10,51 +10,101 @@ public class LevelController : MonoBehaviour
     public SpriteRenderer waterBox;
     public Transform player;
 
-    public Transform Hat;
+ 
 
     Vector3 HatPos;
-    Vector3 plankPos;
+ 
 
 
-    BoxCollider2D blade;
-
-    GameObject plank;
 
 
-    BoxCollider2D balloon;
 
-    BoxCollider2D umbrella;
+    
 
+   
+
+
+    #region level 5
+
+    public SpriteRenderer plankRender;
+    public BoxCollider2D bladeCollider;
+    public BoxCollider2D bladeTrigger;
+
+    public Sprite PlankspriteTop;
+    public SpriteRenderer PlankspriteDown1;
+    public SpriteRenderer PlankspriteDown2;
+    public Vector3 plankPos;
+    public GameObject placePlayer;
+    #endregion
+    public GameObject waterPlayer;
+    public Vector3 waterPos;
+
+
+    public BoxCollider2D powerTrigger;
+    public GameObject powerPlayer;
+    public Vector3 powerPos;
+
+    public BoxCollider2D hairBoxCollider;
+    public BoxCollider2D HatTrigger;
+
+    public Vector3 endHatPos;
+
+    public BoxCollider2D balloonTrigger;
+    public GameObject balloonPlayer;
+
+
+    public BoxCollider2D umbrella;
 
     void Start()
     {
+        PlayerController controller = player.GetComponent<PlayerController>();
+
+        bladeTrigger.OnTriggerEnter2DAsObservable()
+            .Where(_=>_.tag=="Player")
+            .Subscribe(_ =>
+            {
+                LevelEventManager.Instance.LevelEventDic[5]();
+                controller.isMove = false;
+            }).AddTo(gameObject);
+
 
         LevelEventManager.Instance.RegisterLevelEvnent(5, () =>
         {
             //刀片下来，砍断木板，打死猫，猫复活，猫踩木板过去
-           GameObject go= new GameObject();
-
+            GameObject.Destroy(bladeTrigger.gameObject);
+            plankRender.sprite = PlankspriteTop;
+            PlankspriteDown1.gameObject.SetActive(true);
+            PlankspriteDown2.gameObject.SetActive(true);
+            // bladeCollider.gameObject.AddComponent<Rigidbody2D>();
             Observable.Interval(TimeSpan.FromSeconds(0.5f))
             .Subscribe(_ =>
             {
-                blade.transform.position -= Vector3.up * 0.2f;
-            }).AddTo(go);
+                bladeCollider.transform.position -= Vector3.up ;
+            }).AddTo(bladeCollider);
 
-            blade.OnCollisionEnter2DAsObservable()
+            bladeCollider.OnCollisionEnter2DAsObservable()
+            .Where(_=>_.gameObject.tag=="Player")
             .Subscribe(_ => {
 
-                plank.AddComponent<Rigidbody2D>();
-                plank.AddComponent<BoxCollider2D>();
-                blade.enabled = false;
+               
+                controller.SetDead();
 
-                GameManager.Instance.ResetDead(5f, player, () =>
+                GameManager.Instance.ResetDead(0f, player, () =>
                 {
                     player.transform.position = plankPos;
+                    placePlayer.gameObject.SetActive(true);
 
+                    controller.renderer.flipY = false;
+                    controller.isJump = true;
+                    controller.isDead = false;
+                    controller.isMove = true;
+                    controller.renderer.sprite = controller.Idle;
                 },4);
 
 
-            }).AddTo(blade);
+                GameObject.Destroy(bladeCollider.gameObject);
+
+            }).AddTo(bladeCollider);
 
 
         });
@@ -65,9 +115,9 @@ public class LevelController : MonoBehaviour
             .Where(_=>_.tag=="Player")
             .Subscribe(_ =>
             {
-                Debug.Log("water");
+          
                 LevelEventManager.Instance.LevelEventDic[6]();
-            }).AddTo(gameObject);
+            }).AddTo(waterBoxCollider);
 
 
         LevelEventManager.Instance.RegisterLevelEvnent(6, () =>
@@ -95,8 +145,14 @@ public class LevelController : MonoBehaviour
                         waterBoxCollider.isTrigger = false;
 
                         waterBox.material.SetFloat("Hight", h);
-                        GameManager.Instance.ResetDead(5f, player, () =>
+                        GameManager.Instance.ResetDead(0f, player, () =>
                         {
+                            waterPlayer.gameObject.SetActive(true);
+                            player.transform.position = waterPos;
+                     
+                            controller.isDead = false;
+                            controller.isMove = true;
+                            controller.renderer.sprite = controller.Idle;
                             GameObject.Destroy(go);
                             //waterBox.GetComponent<BoxCollider2D>().enabled = true;
                             //waterBox.gameObject.AddComponent<Rigidbody2D>();
@@ -112,86 +168,112 @@ public class LevelController : MonoBehaviour
           
         });
 
+
+        powerTrigger.OnTriggerEnter2DAsObservable()
+            .Where(_=>_.tag=="Player")
+            .Subscribe(_ =>
+            {
+                LevelEventManager.Instance.LevelEventDic[7]();
+            }).AddTo(powerTrigger);
+
+        hairBoxCollider.OnCollisionEnter2DAsObservable()
+            .Where(_ => _.gameObject.tag == "Player")
+            .Where(_ =>powerPlayer.activeSelf)
+            .Subscribe(_ =>
+            {
+              
+                controller.rigidbody2D.simulated = false;
+                Observable.EveryUpdate()
+                 .Subscribe(t =>
+                 {
+                     controller.transform.position+= new Vector3(0, Time.deltaTime);
+                     if (Vector3.Distance(controller.transform.position,HatTrigger.transform.position)<=1)
+                     {
+                         GameObject.Destroy(hairBoxCollider);
+                         player.transform.position = endHatPos;
+                         controller.rigidbody2D.simulated = true;
+                         controller.isState = true;
+                     }
+                 }).AddTo(hairBoxCollider);
+
+            }).AddTo(hairBoxCollider);
+
+
+     
+
         LevelEventManager.Instance.RegisterLevelEvnent(7, () =>
         {
-            GameManager.Instance.ResetDead(5f, player, () =>
+
+            controller.SetDead();
+            GameObject.Destroy(powerTrigger.gameObject);
+            GameManager.Instance.ResetDead(0f, player, () =>
             {
+                player.transform.position = powerPos;
+                powerPlayer.gameObject.SetActive(true);
 
-                //waterBox.GetComponent<BoxCollider2D>().enabled = true;
-                //waterBox.gameObject.AddComponent<Rigidbody2D>();
-
-                Hat.GetComponent<BoxCollider2D>().OnCollisionEnter2DAsObservable()
-                .Subscribe(_ =>
-                {
-                    player.transform.SetParent(Hat);
-
-                    Observable.Timer(TimeSpan.FromSeconds(2f))
-                    .Subscribe(time =>
-                    {
-                        Hat.transform.position = HatPos;
-                    }).AddTo(gameObject);
+                controller.renderer.flipY = false;
+                controller.isJump = true;
+                controller.isDead = false;
+                controller.isMove = true;
+                controller.renderer.sprite = controller.Idle;
                
-
-                }).AddTo(Hat.gameObject);
-
-              
-
-            },6);
+            }, 6);
 
 
+            balloonTrigger.OnTriggerEnter2DAsObservable()
+              .Subscribe(_ =>
+              {
+                  if (_.transform.tag == "Player")
+                  {
 
-            LevelEventManager.Instance.RegisterLevelEvnent(8, () =>
+
+                      Observable.Interval(TimeSpan.FromSeconds(0.5f))
+                      .Subscribe(t_ =>
+                      {
+                          balloonTrigger.transform.position += Vector3.up * 0.2f;
+                      }).AddTo(balloonTrigger);
+
+                      Observable.Timer(TimeSpan.FromSeconds(2f))
+                      .Subscribe(t =>
+                      {
+                          umbrella.gameObject.AddComponent<Rigidbody2D>();
+                          GameObject.Destroy(balloonTrigger.gameObject);
+                      }).AddTo(balloonTrigger);
+                  }
+
+                
+
+              }).AddTo(balloonTrigger);
+
+
+            umbrella.OnCollisionEnter2DAsObservable()
+             .Where(_ => _.gameObject.tag == "Player")
+            .Subscribe(_ =>
             {
+                GameManager.Instance.ResetDead(0f, player, () =>
+                {
+
+                    player.transform.position = endHatPos;
+                    balloonPlayer.gameObject.SetActive(true);
+
+                    controller.renderer.flipY = false;
+                    controller.isJump = true;
+                    controller.isDead = false;
+                    controller.isMove = true;
+                    controller.renderer.sprite = controller.Idle;
+
+                }, 7);
+            }).AddTo(umbrella);
+
+
+          
                 //猫碰气球，气球上升，碰到雨伞，雨伞落下，猫死亡，猫复活，伞打开，鸽子飞出来，打开桥
 
-               
-
-                balloon.OnCollisionEnterAsObservable()
-                .Subscribe(_ =>
-                {
-                    if (_.transform.tag=="Player")
-                    {
-
-                       GameObject go= new GameObject(); 
-
-                        Observable.Interval(TimeSpan.FromSeconds(0.5f))
-                        .Subscribe(t_ =>
-                        {
-                            balloon.transform.position += Vector3.up * 0.2f;
-                        }).AddTo(go);
-                    }
-
-                    if (_.transform.tag == "Umbrella")
-                    {
-
-                        GameObject go = new GameObject();
-
-                        Observable.Interval(TimeSpan.FromSeconds(0.5f))
-                        .Subscribe(t =>
-                        {
-                            balloon.transform.position += Vector3.up * 0.2f;
-                        }).AddTo(go);
-
-                        umbrella.gameObject.AddComponent<Rigidbody2D>();
-                    }
-
-                }).AddTo(balloon);
-
-
-                umbrella.OnCollisionEnter2DAsObservable()
-                .Subscribe(_ =>
-                {
-                    GameManager.Instance.ResetDead(5f, player, () => { 
-                    
-
-
-                     },7);
-                }).AddTo(umbrella);
-
-            });
 
         });
     }
 
   
+    
+
 }
