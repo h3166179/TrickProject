@@ -22,13 +22,14 @@ public class PlayerController : MonoBehaviour
 
     float h;
 
-    BoxCollider2D collider2D;
+    Collider2D collider2D;
 
     Vector3 lastCenter;
 
     public bool isJump;
 
     public bool isMove=true;
+    public bool isState = false;
 
     void Start()
     {
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
 
 
-        collider2D = GetComponent<BoxCollider2D>();
+        collider2D = GetComponent<Collider2D>();
 
         GameManager.Instance.RegisterPlayer(this.transform);
 
@@ -65,22 +66,28 @@ public class PlayerController : MonoBehaviour
                 .Where(_ => _.gameObject.tag == "Map")
                .Subscribe(_ =>
                {
-                   isJump = true;  
+                   if(!isState)
+                    isJump = true;  
             }).AddTo(gameObject);
 
         collider2D.OnCollisionExit2DAsObservable()
             .Where(_=>_.gameObject.tag=="Map")
             .Subscribe(_ =>
             {
-                isJump = false;
+                if (!isState)
+                    isJump = false;
             }).AddTo(gameObject);
     }
 
 
     void Update()
     {
+        if (isState)
+            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Texture/Player/3");
         if (!isMove)
+        {
             return;
+        }
 
          h = Input.GetAxis("Horizontal");
         float speed;
