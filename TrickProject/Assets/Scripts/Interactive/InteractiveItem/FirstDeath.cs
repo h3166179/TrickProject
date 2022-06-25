@@ -17,7 +17,7 @@ public class FirstDeath : InteractiveItem
     {
         catDeath.SetActive(true);
         catDeath.transform.position = GameManager.Instance.GetPlayer().position;
-        //TODO:猫猫重生
+        GameManager.Instance.ResetDead(2,GameManager.Instance.GetPlayer(),null);
         //猫猫失去生命
         GameManager.Instance.UpdateCatHealth(false);
         Destroy(GetComponent<Collider2D>());
