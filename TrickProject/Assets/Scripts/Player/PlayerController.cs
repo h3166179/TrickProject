@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
 
         collider2D.OnCollisionStay2DAsObservable()
-                        .Where(_ => _.gameObject.tag == "Map")
+                .Where(_ => _.gameObject.tag == "Map")
                .Subscribe(_ =>
                {
                    isJump = true;  
@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isJump)
         {
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, height);
-     
+            AudioManager.Instance.UsualSoundsPlay("跳跃");
         }
 
         

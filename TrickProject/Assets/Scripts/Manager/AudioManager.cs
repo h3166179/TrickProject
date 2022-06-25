@@ -18,6 +18,10 @@ public class AudioManager : Singleton<AudioManager>
             Debug.Log("AudioMixer Loding Failed");
 
         Init();
+
+        SetBgmAudioClip("BGM");
+
+
     }
 
     private void Init()
@@ -104,6 +108,7 @@ public class AudioManager : Singleton<AudioManager>
         AudioSource audioSource= gameObject.AddComponent<AudioSource>();
         PropertyAudio(audioSource, AudioType.SHORT, false);
         audioSource.clip = Resources.Load<AudioClip>(path+name);
+        Debug.Log(path + name);
         StartCoroutine(AudioCallBack(audioSource));
         audioSource.Play();
         
@@ -139,7 +144,7 @@ public class AudioManager : Singleton<AudioManager>
     /// <returns></returns>
     private IEnumerator AudioCallBack(AudioSource audioSource)
     {
-        yield return new WaitForSeconds(audioSource.clip.length);
+        yield return new WaitForSeconds(3f);
         Destroy(audioSource);
     }
 
