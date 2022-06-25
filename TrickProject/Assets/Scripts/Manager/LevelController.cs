@@ -13,10 +13,48 @@ public class LevelController : MonoBehaviour
     public Transform Hat;
 
     Vector3 HatPos;
+    Vector3 plankPos;
+
+
+    BoxCollider2D blade;
+
+    GameObject plank;
+
 
     void Start()
     {
+
         LevelEventManager.Instance.RegisterLevelEvnent(5, () =>
+        {
+            //刀片下来，砍断木板，打死猫，猫复活，猫踩木板过去
+           GameObject go= new GameObject();
+
+            Observable.Interval(TimeSpan.FromSeconds(0.5f))
+            .Subscribe(_ =>
+            {
+                blade.transform.position -= Vector3.up * 0.2f;
+            }).AddTo(go);
+
+            blade.OnCollisionEnter2DAsObservable()
+            .Subscribe(_ => {
+
+                plank.AddComponent<Rigidbody2D>();
+                plank.AddComponent<BoxCollider2D>();
+                blade.enabled = false;
+
+                GameManager.Instance.ResetDead(5f, player, () =>
+                {
+                    player.transform.position = plankPos;
+
+                });
+
+
+            }).AddTo(blade);
+
+
+        });
+
+        LevelEventManager.Instance.RegisterLevelEvnent(6, () =>
         {
             //水箱
             waterBox.material.SetFloat("Hight",-0.5f);
@@ -46,7 +84,7 @@ public class LevelController : MonoBehaviour
           
         });
 
-        LevelEventManager.Instance.RegisterLevelEvnent(6, () =>
+        LevelEventManager.Instance.RegisterLevelEvnent(7, () =>
         {
             GameManager.Instance.ResetDead(5f, player, () =>
             {
@@ -72,6 +110,13 @@ public class LevelController : MonoBehaviour
 
             });
 
+
+
+            LevelEventManager.Instance.RegisterLevelEvnent(8, () =>
+            {
+                //猫碰气球，气球上升，碰到雨伞，雨伞落下，猫死亡，猫复活，伞打开，鸽子飞出来，打开桥
+
+            });
 
         });
     }
