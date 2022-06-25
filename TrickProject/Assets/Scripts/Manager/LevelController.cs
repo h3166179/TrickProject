@@ -21,6 +21,11 @@ public class LevelController : MonoBehaviour
     GameObject plank;
 
 
+    BoxCollider2D balloon;
+
+    BoxCollider2D umbrella;
+
+
     void Start()
     {
 
@@ -75,7 +80,7 @@ public class LevelController : MonoBehaviour
 
                         //waterBox.GetComponent<BoxCollider2D>().enabled = true;
                         //waterBox.gameObject.AddComponent<Rigidbody2D>();
-                    
+                      
                     });
                     GameObject.Destroy(go);
                 }
@@ -115,6 +120,50 @@ public class LevelController : MonoBehaviour
             LevelEventManager.Instance.RegisterLevelEvnent(8, () =>
             {
                 //猫碰气球，气球上升，碰到雨伞，雨伞落下，猫死亡，猫复活，伞打开，鸽子飞出来，打开桥
+
+               
+
+                balloon.OnCollisionEnterAsObservable()
+                .Subscribe(_ =>
+                {
+                    if (_.transform.tag=="Player")
+                    {
+
+                       GameObject go= new GameObject(); 
+
+                        Observable.Interval(TimeSpan.FromSeconds(0.5f))
+                        .Subscribe(t_ =>
+                        {
+                            balloon.transform.position += Vector3.up * 0.2f;
+                        }).AddTo(go);
+                    }
+
+                    if (_.transform.tag == "Umbrella")
+                    {
+
+                        GameObject go = new GameObject();
+
+                        Observable.Interval(TimeSpan.FromSeconds(0.5f))
+                        .Subscribe(t =>
+                        {
+                            balloon.transform.position += Vector3.up * 0.2f;
+                        }).AddTo(go);
+
+                        umbrella.gameObject.AddComponent<Rigidbody2D>();
+                    }
+
+                }).AddTo(balloon);
+
+
+                umbrella.OnCollisionEnter2DAsObservable()
+                .Subscribe(_ =>
+                {
+                    GameManager.Instance.ResetDead(5f, player, () => { 
+                    
+
+
+                     });
+                }).AddTo(umbrella);
 
             });
 
