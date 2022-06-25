@@ -57,870 +57,575 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-      <HintPath>G:\Unity\2019.4.1f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.1f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>G:\Unity\2019.4.1f1\Editor\Data\Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.1f1\Editor\Data\Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PlayerController.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\DOTween\Modules\DOTweenModuleAudio.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\DOTween\Modules\DOTweenModulePhysics.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\DOTween\Modules\DOTweenModuleSprite.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\DOTween\Modules\DOTweenModuleUI.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\DOTween\Modules\DOTweenModuleUtils.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\AsyncConnect.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\AsyncDisconnect.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\AsyncIOOperation.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\AsyncReceive.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\AsyncSend.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\AsyncSocketOperation.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\FlexiMemberIgnoreAttribute.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\FlexiMemberIncludeAttribute.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\FlexiMemberOrderAttribute.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\FlexiSerializableAttribute.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\FlexiSerializationLayout.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\FlexiSerializationOptions.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\FlexiSerializer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\FlexiSocket.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\IActionListener.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\IFlexiSerializer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\IProtocol.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\ISocketClient.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\ISocketClientToken.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\ISocketServer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\MessageStructure.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\FlexiSocket\SocketDelegate.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\List\Scripts\ListItemDispatcher.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\List\Scripts\ListReducer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\List\Scripts\ListRenderer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\List\Scripts\ListState.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\List\Scripts\State.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\List\Scripts\Unidux.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Middlewares\Scripts\IObservableExtension.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Middlewares\Scripts\Middlewares.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Middlewares\Scripts\MiddlewaresBehaviour.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Middlewares\Scripts\MiddlewaresReducer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Middlewares\Scripts\State.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Middlewares\Scripts\Unidux.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\MultipleState\Friend.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\MultipleState\MultipleStateRenderer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\MultipleState\State.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\MultipleState\Unidux.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\Page.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\PagePopButton.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\PagePushButton.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\PageReducer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\PageStackRenderer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\PageTitleRenderer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\PageWatcher.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\Scene.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\SceneConfig.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\SceneDispatcher.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\SceneReducer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\SceneWatcher.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\State.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SceneTransition\Scripts\Unidux.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SimpleHttp\Scripts\SimpleHttpDuck.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SimpleHttp\Scripts\SimpleHttpGetDispatcher.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SimpleHttp\Scripts\SimpleHttpRenderer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SimpleHttp\Scripts\State.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\SimpleHttp\Scripts\Unidux.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\Dispatcher\TodoDispatcher.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\Dispatcher\TodoFilterButtonDispatcher.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\Dispatcher\TodoToggleDispatcher.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\Renderer\BaseListRenderer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\Renderer\ICellRenderer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\Renderer\TodoCellRenderer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\Renderer\TodoFilterButtonRenderer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\Renderer\TodoListRenderer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\State.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\Todo.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\TodoDuck.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\TodoVisibilityDuck.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\Unidux.cs" />
-    <Compile Include="Assets\QFramework\Extensions\3rd\Unidux\Examples\Todo\Scripts\VisibilityFilter.cs" />
-    <Compile Include="Assets\QFramework\Extensions\ActionKitDOTweenAction\ActionKitDOTweenAction.cs" />
-    <Compile Include="Assets\QFramework\Extensions\DVA\DvaModelEditor.cs" />
-    <Compile Include="Assets\QFramework\Extensions\DVA\ModelDB.cs" />
-    <Compile Include="Assets\QFramework\Extensions\SerializeHelper4JsonDotnet\JsonDotNetExtensions.cs" />
-    <Compile Include="Assets\QFramework\Extensions\SerializeHelper4JsonDotnet\JsonDotnetSerializer.cs" />
-    <Compile Include="Assets\QFramework\Extensions\SerializeHelper4JsonDotnet\SerializeHelper.cs" />
-    <Compile Include="Assets\QFramework\Extensions\SimpleEventSystem\QFramework.SimpleEventSystem.cs" />
-    <Compile Include="Assets\QFramework\Extensions\UIKitTransition\Extensions\UITransition.cs" />
-    <Compile Include="Assets\QFramework\Extensions\UIKitTransition\FadeInOut.cs" />
-    <Compile Include="Assets\QFramework\Extensions\UIKitTransition\FadeOut.cs" />
-    <Compile Include="Assets\QFramework\Extensions\UIKitTransition\ITransition.cs" />
-    <Compile Include="Assets\QFramework\Extensions\UIKitTransition\Scripts\UI\UITransitionPanel.cs" />
-    <Compile Include="Assets\QFramework\Extensions\UIKitTransition\Scripts\UI\UITransitionPanelComponents.cs" />
-    <Compile Include="Assets\QFramework\Extensions\UIKitTransition\UITransition.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\0.DelayNode\DelayNodeExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\1.EventNode\EventNodeExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\2.SequenceNode\SequenceNodeExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\3.CustomAction\CustomActionExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\4.DotweenAction\DotweenActionExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\5.WWWAction\WWWActionExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\6.TimerDemo\TimerExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\7.Timeline\TimelineExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\8.DelayFrameAction\DelayFrameActionExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Action\ActionLifetimeExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Action\DelayExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Action\EventActionExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Action\SayHelloWorldActionExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Action\UntilActionExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Custom\HelloWorldActionExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Custom\NodeActionLifetimeExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\FSM\ActionKitFSMExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\FSM\EnumStateMachineExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Node\DelaySequenceExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Node\RepeatNodeExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Node\SpawnNodeExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\Node\TimelineNodeExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\NodeExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\NodeSystemExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\ActionKitExample\TestNodeSystemGC\TestNodeSystemGC.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\CSharpExtensionExample\AnimatorExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\CSharpExtensionExample\ExtensionExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\CSharpExtensionExample\GameObjectExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\CSharpExtensionExample\TransformExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\Event\TypeEventSystemExample\1.Usage\TypeEventSystemExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\Event\TypeEventSystemExample\2.InterfaceMode\InterfaceModeExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\IOCExample\IOCFrameworkExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\IOCExample\InjectExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\IOCExample\MainContainer.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\IOCExample\NetworkExampleService.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\Pool\CallPool.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\RefCounter\RefCounterExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\SingletonExample\0.Singleton\Singleton.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\SingletonExample\1.MonoSingleton\MonoSingletonExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\SingletonExample\2.SingletonProperty\SingletonProperty.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\SingletonExample\3.MonoSingletonProperty\MonoSingletonProperty.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\SingletonExample\4.MonoSingletonPath\MonoSingletonPath.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\SingletonExample\5.PersistentMonoSingleton\PersistentMonoSingletonExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\1.CoreExample\SingletonExample\6.ReplaceableMonoSingleton\ReplaceableMonoSingletonExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\2.ResKitExample\0.BasicUsage\ResKitExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\2.ResKitExample\1.LoadAssetBundleResExample\AssetBundleResExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\2.ResKitExample\10.CustomResExample\CustomResExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\2.ResKitExample\2.LoadResourcesResExample\LoadResourcesResExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\2.ResKitExample\3.LoadSceneExample\LoadSceneExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\2.ResKitExample\4.ResLoaderRelateUnloadAsset\ResLoaderRelateUnloadAssetExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\2.ResKitExample\5.LoadSpriteAtlasExample\TestSpriteAtlas.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\2.ResKitExample\7.LoadSceneExample\ResKitExampleMain.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\2.ResKitExample\8.NetImageExample\ImageLoaderExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\2.ResKitExample\8.NetImageExample\NetImageExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\10.MultiPanelExample\MultiPanelExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\10.MultiPanelExample\Scripts\UI\UIMultiPanel.Designer.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\10.MultiPanelExample\Scripts\UI\UIMultiPanel.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\11.ManagerOfManagersExample\Enemy.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\11.ManagerOfManagersExample\EnemyEvent.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\11.ManagerOfManagersExample\EnemyManager.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\11.ManagerOfManagersExample\ManagerOfManagersExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\11.ManagerOfManagersExample\MgrId.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\QEventSystemExample\EventReceiverExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\QEventSystemExample\EventSenderExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Example.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\UI\UIABCPanel.Designer.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\UI\UIABCPanel.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\UI\UIGamePanel.Designer.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\UI\UIGamePanel.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\UI\UIMenuPanel.Designer.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\UI\UIMenuPanel.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\UI\UISectionPanel.Designer.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\UI\UISectionPanel.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\UI\UISettingPanel.Designer.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\UI\UISettingPanel.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\Scripts\Util\UIEventID.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\UIKitExample_LoadFromResources\Scripts\UI\UISomePanelFromResources.Designer.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\UIKitExample_LoadFromResources\Scripts\UI\UISomePanelFromResources.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIExample\UIKitExample_LoadFromResources\Scripts\UIKitExample_LoadFromResoruces.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\3.UIKitExample\UIRootTest\UIRootTestExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\4.AudioKitExample\Audio\AudioTest.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\4.AudioKitExample\AudioExample.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\5.GameplayKitExample\AIExample\CubeRotationAction.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\5.GameplayKitExample\AIExample\MouseDownDecision.cs" />
-    <Compile Include="Assets\QFramework\Framework\Examples\5.GameplayKitExample\AIExample\MouseUpDecision.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\FromUnityToDll\InitFromUnityToDll.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\FromUnityToDll\InputFromUnityToDll.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\FromUnityToDll\PlatformFromUnityToDll.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\FromUnityToDll\SettingFromUnityToDll.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\BZip2\BZip2.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\BZip2\BZip2Constants.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\BZip2\BZip2Exception.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\BZip2\BZip2InputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\BZip2\BZip2OutputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Checksum\Adler32.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Checksum\BZip2Crc.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Checksum\Crc32.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Checksum\IChecksum.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Core\FileSystemScanner.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Core\INameTransform.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Core\IScanFilter.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Core\NameFilter.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Core\PathFilter.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Core\StreamUtils.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Core\WindowsPathUtils.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Encryption\PkzipClassic.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Encryption\ZipAESStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Encryption\ZipAESTransform.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\GZip\GZip.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\GZip\GZipConstants.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\GZip\GZipException.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\GZip\GzipInputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\GZip\GzipOutputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Lzw\LzwConstants.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Lzw\LzwException.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Lzw\LzwInputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\SharpZipBaseException.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Tar\InvalidHeaderException.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Tar\TarArchive.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Tar\TarBuffer.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Tar\TarEntry.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Tar\TarException.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Tar\TarHeader.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Tar\TarInputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Tar\TarOutputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\Deflater.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\DeflaterConstants.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\DeflaterEngine.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\DeflaterHuffman.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\DeflaterPending.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\Inflater.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\InflaterDynHeader.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\PendingBuffer.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\Streams\OutputWindow.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\FastZip.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\IEntryFactory.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\WindowsNameTransform.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\ZipConstants.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\ZipEntry.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\ZipEntryFactory.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\ZipException.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\ZipExtraData.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\ZipFile.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\ZipHelperStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\ZipInputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\ZipNameTransform.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ICSharpCode.SharpZipLib\Zip\ZipOutputStream.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Bind.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\DontDestroyOnLoad.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Empty4Raycast.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Hide.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Component\UIComponent.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Component\UIElement.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Component\UIElementList.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Component\UIScrollPage.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Component\UIScrollPageMark.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Extension\QUICameraUtil.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Extension\UIPointerDownEventListener.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Extension\UIPointerUpEventListener.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Extension\UIRectTransform.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Extension\UISpriteAnimation.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Script\UIPanelTester.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Util\CollisionTriggerListener.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Util\UIEffectHelper.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\Runtime\Util\UIEventListener.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\UIDefaultPanel.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\UIKit\UIMark.cs" />
-    <Compile Include="Assets\QFramework\Framework\Plugins\ZipFileHelper.cs" />
-    <None Include="Assets\QFramework\Framework\Plugins\link.xml" />
-    <None Include="Assets\QFramework\Extensions\3rd\UniRx\ReadMe.txt" />
-    <None Include="Assets\QFramework\Framework\Plugins\PackageKit\Support.xml" />
-    <None Include="Assets\QFramework\Extensions\3rd\JsonDotNet\link.xml" />
-    <None Include="Assets\QFramework\Extensions\3rd\DOTween\readme.txt" />
-    <None Include="Assets\QFramework\Framework\Plugins\PackageKit\SupportItem.xml" />
+    <None Include="Assets\NewImageEffectShader.shader" />
     <Reference Include="UnityEngine">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ARModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AccessibilityModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AndroidJNIModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClusterInputModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ClusterRendererModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CrashReportingModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DSPGraphModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.DirectorModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GridModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.LocalizationModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PerformanceReportingModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Physics2DModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ProfilerModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SharedInternalsModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteMaskModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpriteShapeModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StreamingModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SubsystemsModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TLSModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainPhysicsModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextCoreModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TilemapModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UNETModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityAnalyticsModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityTestProtocolModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestTextureModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestWWWModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VFXModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VRModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VehiclesModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XRModule">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="ProtobufNet">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Assets/QFramework/Extensions/3rd/ProtobufNet/ProtobufNet.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Assets/QFramework/Extensions/3rd/DOTween/DOTween.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Assets/QFramework/Extensions/3rd/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="mscorlib">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Core">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Runtime.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml.Linq">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Numerics.Vectors">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Net.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Win32.Primitives">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.AppContext">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.AppContext.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Concurrent">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.NonGeneric">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Specialized">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel.Annotations">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.EventBasedAsync">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Primitives">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.TypeConverter">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ComponentModel.TypeConverter.dll</HintPath>
     </Reference>
     <Reference Include="System.Console">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Console.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Console.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Common">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Data.Common.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Data.Common.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Contracts">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Debug">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Debug.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.FileVersionInfo">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Process">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Process.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.StackTrace">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.TextWriterTraceListener">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.Tools">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tools.dll</HintPath>
     </Reference>
     <Reference Include="System.Diagnostics.TraceSource">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Diagnostics.Tracing.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing.Primitives">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Drawing.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Dynamic.Runtime">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Dynamic.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Globalization.Calendars">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Calendars.dll</HintPath>
     </Reference>
     <Reference Include="System.Globalization">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.dll</HintPath>
     </Reference>
     <Reference Include="System.Globalization.Extensions">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Globalization.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Compression.ZipFile">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Compression.ZipFile.dll</HintPath>
     </Reference>
     <Reference Include="System.IO">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem.DriveInfo">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem.Primitives">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.FileSystem.Watcher">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.FileSystem.Watcher.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.IsolatedStorage">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.IsolatedStorage.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.MemoryMappedFiles">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.MemoryMappedFiles.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Pipes">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.Pipes.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.UnmanagedMemoryStream">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq.Expressions">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Expressions.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq.Parallel">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Parallel.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq.Queryable">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http.Rtc">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll</HintPath>
+    <Reference Include="System.Net.Http">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.NameResolution">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.NetworkInformation">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NetworkInformation.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Ping">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Ping.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Primitives">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Requests">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Requests.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Security">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Security.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Security.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Sockets">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Sockets.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.WebHeaderCollection">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebHeaderCollection.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.WebSockets.Client">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.Client.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.WebSockets">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.WebSockets.dll</HintPath>
     </Reference>
     <Reference Include="System.ObjectModel">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Emit">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Emit.ILGeneration">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Emit.Lightweight">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection.Extensions">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Reflection.Primitives">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Reflection.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Resources.Reader">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Reader.dll</HintPath>
     </Reference>
     <Reference Include="System.Resources.ResourceManager">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.ResourceManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Resources.Writer">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Resources.Writer.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.VisualC">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Extensions">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Handles">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Handles.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Numerics">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Numerics.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization.Formatters">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization.Json">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization.Primitives">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization.Xml">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Claims">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Claims.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Algorithms">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Csp">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Csp.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Encoding">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Encoding.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Primitives">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.X509Certificates">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Principal">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.Principal.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.SecureString">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.Duplex">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.Http">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.NetTcp">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.Primitives">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ServiceModel.Security">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Security.SecureString.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encoding">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.Encoding.Extensions">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.Encoding.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.RegularExpressions">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Text.RegularExpressions.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Overlapped">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Overlapped.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Parallel">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Tasks.Parallel.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Thread">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Thread.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.ThreadPool">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.ThreadPool.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Timer">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Threading.Timer.dll</HintPath>
     </Reference>
     <Reference Include="System.ValueTuple">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.ReaderWriter">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.ReaderWriter.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XDocument">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XmlDocument">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlDocument.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XmlSerializer">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XmlSerializer.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XPath">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XPath.XDocument">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
-    <Reference Include="UnityScript">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.dll</HintPath>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="UnityScript.Lang">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/UnityScript.Lang.dll</HintPath>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
     </Reference>
-    <Reference Include="Boo.Lang">
-      <HintPath>G:/Unity/2019.4.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
+    <Reference Include="mscorlib">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.ServiceModel.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Transactions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>E:/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>E:/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>E:/TrickProject/TrickProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>E:/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>E:/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/TrickProject/TrickProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>G:/UnityGame/2022CGJ/TrickProject/TrickProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>E:/TrickProject/TrickProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UniRx.csproj">
       <Project>{070A7FA0-7DB1-AE35-BFB0-3E2FF9492194}</Project>
       <Name>UniRx</Name>
-    </ProjectReference>
-    <ProjectReference Include="QF.Redux.csproj">
-      <Project>{D8DF75D2-96AA-03BD-CE05-A34D3D0663BE}</Project>
-      <Name>QF.Redux</Name>
-    </ProjectReference>
-    <ProjectReference Include="QFramework.Runtime.csproj">
-      <Project>{F4FA215A-C00E-600A-374C-5B8B022DC29E}</Project>
-      <Name>QFramework.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
