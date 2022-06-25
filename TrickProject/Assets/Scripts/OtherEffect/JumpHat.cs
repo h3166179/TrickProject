@@ -6,8 +6,8 @@ public class JumpHat : MonoBehaviour
 {
     //TODO:帽子层级调高
     private Transform player;
-    public Transform loadPoint;
-    private bool isTrans = false;
+    public Transform targetPoint;
+    public bool isTrans = false;
     [SerializeField] private float jumpHeight = 4f;
     [SerializeField] private JumpHat relativeObj;//关联帽子
 
@@ -19,15 +19,20 @@ public class JumpHat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isTrans)
+            return;
         if(!player.GetComponent<PlayerController>().isJump && collision.tag.Equals("Player"))
         {
-            if(relativeObj!=null && !isTrans)
+            isTrans = true;
+            if (relativeObj != null)
             {
-                isTrans = true;
-                Invoke("WaitTime", 2f);
-                player.transform.position = relativeObj.loadPoint.position;
-                Rigidbody2D rigidbody2D=player.GetComponent<Rigidbody2D>();
+                relativeObj.isTrans = true;
+                GetComponent<Collider2D>().enabled = false;
+                if (player != null)
+                    player.transform.position = targetPoint.position;
+                Rigidbody2D rigidbody2D = player.GetComponent<Rigidbody2D>();
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpHeight);
+                Invoke("WaitTime", 2f);
             }
         }
     }
@@ -35,5 +40,7 @@ public class JumpHat : MonoBehaviour
     private void WaitTime()
     {
         isTrans = false;
+        relativeObj.isTrans = false;
+        GetComponent<Collider2D>().enabled = true;
     }
 }

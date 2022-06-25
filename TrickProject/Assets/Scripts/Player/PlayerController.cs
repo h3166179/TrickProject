@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetDead()
     {
-  
+        isMove = false;
         rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, height * 0.5f);
         renderer.sprite = Damage;
         renderer.flipY = true;
@@ -171,7 +171,6 @@ public class PlayerController : MonoBehaviour
             {
              
                 renderer.sprite = Damage;
-          
             }).AddTo(gameObject);
     }
 }

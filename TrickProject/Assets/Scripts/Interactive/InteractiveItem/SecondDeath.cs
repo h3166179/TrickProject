@@ -18,8 +18,10 @@ public class SecondDeath : InteractiveItem
         //猫猫尸体脱落
         //catDeath.SetActive(true);
         //catDeath.transform.position = GameManager.Instance.GetPlayer().position;
-        GameManager.Instance.ResetDead(1f,GameManager.Instance.GetPlayer(),null,1);
+        GameManager.Instance.GetPlayer().GetComponent<PlayerController>().SetDead();
+        GameManager.Instance.ResetDead(2f,GameManager.Instance.GetPlayer(),null,1);
         DialogManager.Instance.DialogPlay(1);
+        GetComponent<Collider2D>().enabled = false;
         //catDeath.transform.SetParent(transform.parent);
     }
 }
