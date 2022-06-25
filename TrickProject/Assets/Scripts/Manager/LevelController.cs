@@ -55,6 +55,19 @@ public class LevelController : MonoBehaviour
 
     public BoxCollider2D umbrella;
 
+    public Vector3 umbrellaPos;
+
+    public GameObject Openumbrella;
+
+    public Sprite[] pigeonSprites;
+
+    public SpriteRenderer pigeon;
+
+
+    public BoxCollider2D bridgeTrigger;
+    public Vector3 lastPos;
+    public Vector3 startPigeonPos;
+
     void Start()
     {
         PlayerController controller = player.GetComponent<PlayerController>();
@@ -189,10 +202,13 @@ public class LevelController : MonoBehaviour
                      controller.transform.position+= new Vector3(0, Time.deltaTime);
                      if (Vector3.Distance(controller.transform.position,HatTrigger.transform.position)<=1)
                      {
-                         GameObject.Destroy(hairBoxCollider);
+                        
                          player.transform.position = endHatPos;
                          controller.rigidbody2D.simulated = true;
-                         controller.isState = true;
+                         controller.isJump = true;
+                         controller.isDead = false;
+                         controller.isMove = true;
+                         GameObject.Destroy(hairBoxCollider);
                      }
                  }).AddTo(hairBoxCollider);
 
@@ -223,10 +239,11 @@ public class LevelController : MonoBehaviour
             balloonTrigger.OnTriggerEnter2DAsObservable()
               .Subscribe(_ =>
               {
+          
                   if (_.transform.tag == "Player")
                   {
 
-
+                    
                       Observable.Interval(TimeSpan.FromSeconds(0.5f))
                       .Subscribe(t_ =>
                       {
@@ -253,7 +270,7 @@ public class LevelController : MonoBehaviour
                 GameManager.Instance.ResetDead(0f, player, () =>
                 {
 
-                    player.transform.position = endHatPos;
+                    player.transform.position = umbrellaPos;
                     balloonPlayer.gameObject.SetActive(true);
 
                     controller.renderer.flipY = false;
@@ -261,6 +278,22 @@ public class LevelController : MonoBehaviour
                     controller.isDead = false;
                     controller.isMove = true;
                     controller.renderer.sprite = controller.Idle;
+
+
+                    Observable.Timer(TimeSpan.FromSeconds(3f))
+                    .Subscribe(t =>
+                    {
+                        Openumbrella.gameObject.SetActive(true);
+                        umbrella.gameObject.SetActive(false);
+                        for (int i = 0; i <9; i++)
+                        {
+                            Observable.Timer(TimeSpan.FromSeconds(i*3))
+                            .Subscribe(time =>
+                            {
+                                SetPigeon();
+                            }).AddTo(gameObject);
+                        }
+                    }).AddTo(umbrella);
 
                 }, 7);
             }).AddTo(umbrella);
@@ -271,9 +304,89 @@ public class LevelController : MonoBehaviour
 
 
         });
+
+
+       
     }
 
   
     
+    public void SetPigeon()
+    {
+        int index=0;
+        bool isEnd=false;
+        bool isStart = false;
+        bool isExit = false;
 
+        GameObject go=GameObject.Instantiate(pigeon.gameObject);
+        go.SetActive(true);
+        SpriteRenderer renderer= go.GetComponent<SpriteRenderer>();
+        Observable.Interval(TimeSpan.FromSeconds(0.5f))
+            .Subscribe(_ =>
+            {
+               
+                renderer.sprite = pigeonSprites[index];
+                index++;
+                if (index== pigeonSprites.Length)
+                {
+                    index = 0;
+                }
+            }).AddTo(go);
+
+
+        Observable.EveryUpdate()
+            .Where(_=>go.name!= "endPigeon")
+            .Subscribe(_ =>
+            {
+              
+               
+
+                if (Vector3.Distance(go.transform.position, bridgeTrigger.transform.position) <= 1f)
+                {
+                    isEnd = true;
+                }
+
+                if (!isStart)
+                {
+                    if (Vector3.Distance(go.transform.position, startPigeonPos) <= 1)
+                    {
+                        go.transform.position += Vector3.right * Time.deltaTime;
+                        isStart = true;
+                    }
+                    else
+                    {
+                        go.transform.position = Vector3.Lerp(go.transform.position, startPigeonPos, 0.05f);
+                    }
+                }
+
+
+               
+                if (isStart && !isEnd)
+                {
+                    go.transform.position = Vector3.Lerp(go.transform.position, bridgeTrigger.transform.position+Vector3.up, 0.05f);
+
+                    if (Vector3.Distance(go.transform.position, bridgeTrigger.transform.position + Vector3.up) <= 1f)
+                    {
+                        isEnd = true;
+
+                    }
+                }
+
+
+
+                if (isEnd&&!isExit)
+                {
+                    go.transform.position = Vector3.Lerp(go.transform.position, lastPos+Vector3.right*2, 0.02f);
+                    if (Vector3.Distance(go.transform.position, lastPos+Vector3.right * 2) <= 1f)
+                    {
+                        go.transform.position = lastPos + Vector3.right * 2;
+                        lastPos = go.transform.position;
+                        isExit = true;
+                    }
+                }
+
+              
+
+            }).AddTo(go);
+    }
 }
