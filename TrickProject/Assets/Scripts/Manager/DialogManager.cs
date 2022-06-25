@@ -32,7 +32,7 @@ public class DialogManager : Singleton<DialogManager>
             }
             else
             {
-                result_txt[num] = result_txt[num].Substring(0, result_txt[num].Length - 3);
+                //result_txt[num] = result_txt[num].Substring(0, result_txt[num].Length - 3);
                 num++;
             }
         }

@@ -32,6 +32,7 @@ public class FourthDeath : InteractiveItem
         GameManager.Instance.GetPlayer().gameObject.SetActive(false);
         fourthKnife.transform.parent.GetComponent<Collider2D>().enabled = true;
         GameManager.Instance.ResetDead(2, GameManager.Instance.GetPlayer(), null, 3, false);
+        GameManager.Instance.HealthUIUpdate();
         DialogManager.Instance.DialogPlay(3);
         catDeath.SetActive(true);
         float time =0;

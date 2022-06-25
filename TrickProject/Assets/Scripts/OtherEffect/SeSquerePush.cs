@@ -10,7 +10,7 @@ public class SeSquerePush : MonoBehaviour
         if(collision.tag.Equals("otherItem"))
         {
             Rigidbody2D rigb = collision.GetComponent<Rigidbody2D>();
-            rigb.velocity=new Vector2(20, rigb.velocity.y+5f);
+            rigb.velocity=new Vector2(25, rigb.velocity.y+5f);
         }
     }
 }

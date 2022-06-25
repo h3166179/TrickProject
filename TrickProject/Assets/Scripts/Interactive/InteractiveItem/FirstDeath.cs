@@ -22,7 +22,7 @@ public class FirstDeath : InteractiveItem
         //播放文字
         DialogManager.Instance.DialogPlay(0);
         //猫猫失去生命
-        GameManager.Instance.UpdateCatHealth(false);
+        GameManager.Instance.HealthUIUpdate();
         Destroy(GetComponent<Collider2D>());
     }
 

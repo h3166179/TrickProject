@@ -6,6 +6,8 @@ public class InteractiveShow : InteractiveBase
 {
     //[SerializeField] private Material outMt;
     [SerializeField] private float tipSpeed = 0.5f;
+    [SerializeField] private float hideSpeed = 2f;
+    [SerializeField] private float showTime = 2f;
 
     private GameObject showTipPb;
     private CanvasGroup showGroup;
@@ -57,9 +59,10 @@ public class InteractiveShow : InteractiveBase
     private IEnumerator HideText()
     {
         float time = 1;
+        yield return new WaitForSeconds(showTime);
         while (time >0)
         {
-            time -= Time.deltaTime / tipSpeed;
+            time -= Time.deltaTime / hideSpeed;
             showGroup.alpha = time;
             yield return null;
         }
