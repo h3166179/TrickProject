@@ -101,7 +101,8 @@ public class LevelController : MonoBehaviour
 
                
                 controller.SetDead();
-
+                DialogManager.Instance.DialogPlay(4);
+                GameManager.Instance.HealthUIUpdate();
                 GameManager.Instance.ResetDead(0f, player, () =>
                 {
                     player.transform.position = plankPos;
@@ -158,6 +159,8 @@ public class LevelController : MonoBehaviour
                         waterBoxCollider.isTrigger = false;
 
                         waterBox.material.SetFloat("Hight", h);
+                        DialogManager.Instance.DialogPlay(5);
+                        GameManager.Instance.HealthUIUpdate();
                         GameManager.Instance.ResetDead(0f, player, () =>
                         {
                             waterPlayer.gameObject.SetActive(true);
@@ -222,6 +225,8 @@ public class LevelController : MonoBehaviour
 
             controller.SetDead();
             GameObject.Destroy(powerTrigger.gameObject);
+            DialogManager.Instance.DialogPlay(6);
+            GameManager.Instance.HealthUIUpdate();
             GameManager.Instance.ResetDead(0f, player, () =>
             {
                 player.transform.position = powerPos;
@@ -267,9 +272,10 @@ public class LevelController : MonoBehaviour
              .Where(_ => _.gameObject.tag == "Player")
             .Subscribe(_ =>
             {
+                DialogManager.Instance.DialogPlay(7);
+                GameManager.Instance.HealthUIUpdate();
                 GameManager.Instance.ResetDead(0f, player, () =>
                 {
-
                     player.transform.position = umbrellaPos;
                     balloonPlayer.gameObject.SetActive(true);
 

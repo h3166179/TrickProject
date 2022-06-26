@@ -163,8 +163,8 @@ public class PlayerController : MonoBehaviour
 
     public void SetDead()
     {
-        if (isDead)
-            return;
+        //if (isDead)
+        //    return;
         isMove = false;
         rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, height * 0.5f);
         renderer.sprite = Damage;

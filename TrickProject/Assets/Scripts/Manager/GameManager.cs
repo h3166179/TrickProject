@@ -112,14 +112,13 @@ public class GameManager : SingletonBlank<GameManager>
             if(levelIndex!=-1)
                 trans.position = GameManager.Instance.loadPoint[levelIndex].position;
             trans.GetComponent<PlayerController>().isMove = true;
-            sceneFader.CanvasFadeIn();
+            sceneFader.CanvasFadeOut();
         });
 
         Observable.Timer(TimeSpan.FromSeconds(delay))
             .Subscribe(_ =>
             {
-              
-                sceneFader.CanvasFadeOut();
+                sceneFader.CanvasFadeIn();
                 action?.Invoke();
             }).AddTo(trans);
 
