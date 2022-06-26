@@ -17,7 +17,7 @@ public class DialogManager : Singleton<DialogManager>
         dialogPrefab = Resources.Load<GameObject>("UI/Prefab/DialogCanvas");
     }
 
-    public void DialogPlay(int index)
+    public void DialogPlay(int index,bool isBlack=false)
     {
         canvas = GameObject.Instantiate(dialogPrefab).GetComponent<CanvasGroup>();
         Text dialog_text = canvas.transform.GetChild(0).GetChild(0).GetComponent<Text>();
@@ -36,15 +36,17 @@ public class DialogManager : Singleton<DialogManager>
                 num++;
             }
         }
-        StartCoroutine(ShowDialog(result_txt[index]));
+        StartCoroutine(ShowDialog(result_txt[index], isBlack));
     }
 
 
-    private IEnumerator ShowDialog(string txt)
+    private IEnumerator ShowDialog(string txt,bool isBlack=false)
     {
         string[] dialog = txt.Split('\r');
         int index = 0;
         Text dialog_text = canvas.transform.GetChild(0).GetChild(0).GetComponent<Text>();
+        if (isBlack)
+            dialog_text.color = new Color(0, 0, 0, 1);
         while (index<dialog.Length)
         {
             dialog_text.text = dialog[index];

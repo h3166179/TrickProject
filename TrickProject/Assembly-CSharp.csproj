@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\Manager\LevelController.cs" />
     <Compile Include="Assets\Scripts\Manager\LevelEventManager.cs" />
+    <Compile Include="Assets\Scripts\OtherEffect\DeadthTrigger.cs" />
     <Compile Include="Assets\Scripts\OtherEffect\EndTrigger.cs" />
     <Compile Include="Assets\Scripts\OtherEffect\JumpHat.cs" />
     <Compile Include="Assets\Scripts\OtherEffect\LoadPointRegister.cs" />

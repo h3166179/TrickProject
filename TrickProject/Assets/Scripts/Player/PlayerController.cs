@@ -72,8 +72,7 @@ public class PlayerController : MonoBehaviour
                .Subscribe(_ =>
                {
                    if(!isState)
-                    
-                   isJump = true;  
+                    isJump = true;  
             }).AddTo(gameObject);
 
         collider2D.OnCollisionExit2DAsObservable()
@@ -90,9 +89,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("isJump"+isJump);
-        Debug.Log("isState" + isState);
-        Debug.Log("isDead"+isDead);
+      
         if (isState)
         {
 
