@@ -14660,6 +14660,7 @@ GameObject:
   - component: {fileID: 2073392217}
   - component: {fileID: 2073392216}
   - component: {fileID: 2073392215}
+  - component: {fileID: 2073392218}
   m_Layer: 9
   m_Name: waterPlayer
   m_TagString: Map
@@ -14757,6 +14758,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2073392218
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073392214}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da7d6873cf8987b4592e463b9c8cd012, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2076227375
 GameObject:
   m_ObjectHideFlags: 0

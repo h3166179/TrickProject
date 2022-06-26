@@ -166,13 +166,18 @@ public class LevelController : MonoBehaviour
                         GameManager.Instance.ResetDead(0f, player, () =>
                         {
                             player.gameObject.SetActive(false);
-                            waterPlayer.gameObject.SetActive(true);
-                            //player.transform.position = waterPos;
-                            WaterDeadthTri.gameObject.SetActive(true);
-                            controller.isDead = false;
-                            controller.isMove = true;
-                            controller.renderer.sprite = controller.Idle;
-                            GameObject.Destroy(go);
+                            Observable.Timer(TimeSpan.FromSeconds(2f)).Subscribe(a => {
+                                waterPlayer.gameObject.SetActive(true);
+                                //waterPlayer.GetComponent<Animator>().SetBool("isTrigger", true);
+                                //player.transform.position = waterPos;
+                                WaterDeadthTri.gameObject.SetActive(true);
+                                controller.isDead = false;
+                                controller.isMove = true;
+                                controller.renderer.sprite = controller.Idle;
+                                GameObject.Destroy(go);
+
+                            });
+                           
                             //waterBox.GetComponent<BoxCollider2D>().enabled = true;
                             //waterBox.gameObject.AddComponent<Rigidbody2D>();
 
