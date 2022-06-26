@@ -90,6 +90,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("isJump"+isJump);
+        Debug.Log("isState" + isState);
+        Debug.Log("isDead"+isDead);
         if (isState)
         {
 

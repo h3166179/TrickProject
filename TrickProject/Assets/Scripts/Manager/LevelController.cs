@@ -105,7 +105,7 @@ public class LevelController : MonoBehaviour
                 GameManager.Instance.HealthUIUpdate();
                 GameManager.Instance.ResetDead(0f, player, () =>
                 {
-                    player.transform.position = plankPos;
+                    //player.transform.position = plankPos;
                     placePlayer.gameObject.SetActive(true);
 
                     controller.renderer.flipY = false;
@@ -113,7 +113,7 @@ public class LevelController : MonoBehaviour
                     controller.isDead = false;
                     controller.isMove = true;
                     controller.renderer.sprite = controller.Idle;
-                },4);
+                },4,false);
 
 
                 GameObject.Destroy(bladeCollider.gameObject);
@@ -164,7 +164,7 @@ public class LevelController : MonoBehaviour
                         GameManager.Instance.ResetDead(0f, player, () =>
                         {
                             waterPlayer.gameObject.SetActive(true);
-                            player.transform.position = waterPos;
+                            //player.transform.position = waterPos;
                      
                             controller.isDead = false;
                             controller.isMove = true;
@@ -192,7 +192,7 @@ public class LevelController : MonoBehaviour
                 LevelEventManager.Instance.LevelEventDic[7]();
             }).AddTo(powerTrigger);
 
-        hairBoxCollider.OnCollisionEnter2DAsObservable()
+        hairBoxCollider.OnTriggerEnter2DAsObservable()
             .Where(_ => _.gameObject.tag == "Player")
             .Where(_ =>powerPlayer.activeSelf)
             .Subscribe(_ =>
@@ -205,9 +205,11 @@ public class LevelController : MonoBehaviour
                      controller.transform.position+= new Vector3(0, Time.deltaTime);
                      if (Vector3.Distance(controller.transform.position,HatTrigger.transform.position)<=1)
                      {
-                        
+
                          player.transform.position = endHatPos;
                          controller.rigidbody2D.simulated = true;
+                         player.GetComponent<PlayerController>().isJump = false;
+                         player.GetComponent<Rigidbody2D>().velocity = new Vector2(player.GetComponent<Rigidbody2D>().velocity.x, 4f);
                          controller.isJump = true;
                          controller.isDead = false;
                          controller.isMove = true;
@@ -232,7 +234,7 @@ public class LevelController : MonoBehaviour
                 Observable.Timer(TimeSpan.FromSeconds(2f))
                 .Subscribe(_ =>
                 {
-                    powerPlayer.transform.position = powerPos;
+                    player.transform.position = powerPos;
                     powerPlayer.gameObject.SetActive(true);
 
                     controller.renderer.flipY = false;
@@ -298,7 +300,7 @@ public class LevelController : MonoBehaviour
                         umbrella.gameObject.SetActive(false);
                         for (int i = 0; i <9; i++)
                         {
-                            Observable.Timer(TimeSpan.FromSeconds(i*3))
+                            Observable.Timer(TimeSpan.FromSeconds(i))
                             .Subscribe(time =>
                             {
                                 SetPigeon();
