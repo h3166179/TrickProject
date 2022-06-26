@@ -38,7 +38,7 @@ public class LevelController : MonoBehaviour
     #endregion
     public GameObject waterPlayer;
     public Vector3 waterPos;
-
+    public BoxCollider2D waterTrriger;
 
     public BoxCollider2D powerTrigger;
     public GameObject powerPlayer;
@@ -125,20 +125,20 @@ public class LevelController : MonoBehaviour
 
         BoxCollider2D waterBoxCollider=waterBox.GetComponent<BoxCollider2D>();
 
-        waterBoxCollider.OnTriggerEnter2DAsObservable()
+        waterTrriger.OnTriggerEnter2DAsObservable()
             .Where(_=>_.tag=="Player")
             .Subscribe(_ =>
             {
           
                 LevelEventManager.Instance.LevelEventDic[6]();
-            }).AddTo(waterBoxCollider);
+            }).AddTo(waterTrriger);
 
 
         LevelEventManager.Instance.RegisterLevelEvnent(6, () =>
         {
             //水箱
-            waterBox.material.SetFloat("Hight",-0.5f);
-
+            waterBox.material.SetFloat("Hight",0.4f);
+            waterTrriger.enabled = false;
             GameObject go = new GameObject();
             Observable.EveryUpdate()
             .Subscribe(_ =>
@@ -173,7 +173,7 @@ public class LevelController : MonoBehaviour
                             //waterBox.GetComponent<BoxCollider2D>().enabled = true;
                             //waterBox.gameObject.AddComponent<Rigidbody2D>();
 
-                        }, 5);
+                        }, 5,false);
                     }
                  
                   
@@ -229,16 +229,21 @@ public class LevelController : MonoBehaviour
             GameManager.Instance.HealthUIUpdate();
             GameManager.Instance.ResetDead(0f, player, () =>
             {
-                player.transform.position = powerPos;
-                powerPlayer.gameObject.SetActive(true);
+                Observable.Timer(TimeSpan.FromSeconds(2f))
+                .Subscribe(_ =>
+                {
+                    powerPlayer.transform.position = powerPos;
+                    powerPlayer.gameObject.SetActive(true);
 
-                controller.renderer.flipY = false;
-                controller.isJump = true;
-                controller.isDead = false;
-                controller.isMove = true;
-                controller.renderer.sprite = controller.Idle;
+                    controller.renderer.flipY = false;
+                    controller.isJump = true;
+                    controller.isDead = false;
+                    controller.isMove = true;
+                    controller.renderer.sprite = controller.Idle;
+                }).AddTo(gameObject);
                
-            }, 6);
+               
+            }, 6,false);
 
 
             balloonTrigger.OnTriggerEnter2DAsObservable()
@@ -301,7 +306,7 @@ public class LevelController : MonoBehaviour
                         }
                     }).AddTo(umbrella);
 
-                }, 7);
+                }, 7,false);
             }).AddTo(umbrella);
 
 
@@ -356,12 +361,12 @@ public class LevelController : MonoBehaviour
                 {
                     if (Vector3.Distance(go.transform.position, startPigeonPos) <= 1)
                     {
-                        go.transform.position += Vector3.right * Time.deltaTime;
+                        go.transform.position += Vector3.right * Time.deltaTime*0.1f;
                         isStart = true;
                     }
                     else
                     {
-                        go.transform.position = Vector3.Lerp(go.transform.position, startPigeonPos, 0.05f);
+                        go.transform.position = Vector3.Lerp(go.transform.position, startPigeonPos, Time.deltaTime);
                     }
                 }
 
